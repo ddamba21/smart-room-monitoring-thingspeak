@@ -50,7 +50,7 @@ SoftwareSerial esp8266(ESP_RX, ESP_TX);
 // ---------------- WIFI / THINGSPEAK ----------------
 const char* WIFI_SSID  = "To_be_set";
 const char* WIFI_PASS  = "Group_whatever";
-const char* TS_API_KEY = "YOUR_THINGSPEAK_WRITE_API_KEY";
+const char* TS_API_KEY = "TU2YQZ98JE45PEH3";
 const char* TS_HOST    = "api.thingspeak.com";
 
 const unsigned long READ_INTERVAL = 20000UL; // 20 seconds, per spec
