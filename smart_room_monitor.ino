@@ -1,9 +1,8 @@
 /*
   =====================================================================
     Smart Room Monitoring System with ThingSpeak
-  TETE/TEEE 3102 -- Assignment 1
-        Hardware: Arduino Uno + DHT11/DHT22 + PIR + HC-SR04 Ultrasonic + Buzzer
-                  + ESP8266 (ESP-01, AT firmware) as the WiFi module
+    Hardware: Arduino Uno + DHT11/DHT22 + PIR + HC-SR04 Ultrasonic + Buzzer
+          + ESP8266 (ESP-01, AT firmware) as the WiFi module
   =====================================================================
 
         WHAT THIS SKETCH DOES
@@ -16,18 +15,18 @@
        ESP8266, using plain AT commands (no extra WiFi library needed
        on the Arduino side -- the ESP8266 does the TCP/HTTP work).
 
-        BEFORE YOU FLASH THIS
+        BEFORE FLASHING:
         ----------------------
         - Install the "DHT sensor library" by Adafruit (Library Manager),
     plus its dependency "Adafruit Unified Sensor".
         - Fill in WIFI_SSID, WIFI_PASS, and TS_API_KEY below (Write API Key
-    from your ThingSpeak channel -- see issue #2 on the GitHub Project).
+    from ThingSpeak channel -- see issue #2 on the GitHub Project).
         - Check your ESP8266's AT-firmware baud rate. Factory default is
           often 115200; this sketch assumes it's been set to 9600 with
           AT+UART_DEF=9600,8,1,0,0. If WiFi never connects, that's the
           first thing to check.
         - Wiring below assumes the pin numbers in PIN DEFINITIONS -- adjust
-          to match your actual breadboard layout (issue #1).
+          to match the actual breadboard layout (issue #1).
 */
 
 #include <SoftwareSerial.h>
@@ -49,8 +48,8 @@ DHT dht(DHTPIN, DHTTYPE);
 SoftwareSerial esp8266(ESP_RX, ESP_TX);
 
 // ---------------- WIFI / THINGSPEAK ----------------
-const char* WIFI_SSID  = "YOUR_WIFI_NAME";
-const char* WIFI_PASS  = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID  = "To_be_set";
+const char* WIFI_PASS  = "Group_whatever";
 const char* TS_API_KEY = "YOUR_THINGSPEAK_WRITE_API_KEY";
 const char* TS_HOST    = "api.thingspeak.com";
 
